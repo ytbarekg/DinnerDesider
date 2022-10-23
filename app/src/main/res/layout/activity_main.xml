@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/decide"
-        android:layout_width="393dp"
-        android:layout_height="38dp"
-        android:text="Decide"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="693dp" />
-
-    <Button
-        android:id="@+id/AddFood"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Food"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="564dp" />
+        app:srcCompat="@drawable/dd_logo"
+        tools:layout_conversion_absoluteHeight="122dp"
+        tools:layout_conversion_absoluteWidth="122dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="144dp" />
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/newFoodName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/chosenFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_conversion_absoluteHeight="19dp"
+        tools:layout_conversion_absoluteWidth="0dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="151dp" />
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/newFoodName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/newFoodName"
@@ -30,23 +51,47 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="new food name"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="492dp" />
-
-    <TextView
-        android:id="@+id/chosenFood"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="210dp"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="407dp" />
+    <Space
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="287dp" />
+        app:layout_constraintBottom_toTopOf="@+id/newFoodName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <Button
+        android:id="@+id/addFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/dd_logo"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="116dp" />
+        android:text="Add Food"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="109dp"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="493dp" />
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_conversion_absoluteHeight="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/newFoodName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/decide"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:text="Decide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_conversion_absoluteHeight="38dp"
+        tools:layout_conversion_absoluteWidth="393dp"
+        tools:layout_editor_absoluteY="612dp" />
+
+
+</LinearLayout>
